@@ -1,0 +1,27 @@
+{-# LANGUAGE ForeignFunctionInterface #-}
+
+module Api where
+
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.C.Types
+
+foreign export ccall initialize :: CString -> CString -> CString -> CString -> IO ()
+initialize :: CString -> CString -> CString -> CString
+initialize addr pass host port =
+  initSystem EmailAccount { username = (peekCString addr)
+                          , password = (peekCString pass)
+                          , host = (peekCString host)
+                          , port = (peekCString port)
+                          }
+
+increment account email
+
+decrement account email
+
+befriend account friend_email friend_pubkey
+
+revoke account
+
+main :: IO ()
+main = smtpTest >> imapTest >> return ()

@@ -1,0 +1,23 @@
+
+| Action | Steps | Consensus/Validation |
+| Give credits | Sender signs transaction, sends to reciever. Reciever signs transaction, sends to everyone. | Becomes parent commit(loose)       |
+| Request transactions between two commits | |
+| Demand credits | |
+| Decay credits | |
+| Grant time's credits(granularity is every five minutes, defferd computation from time of last recorded value. |
+| Contest a transaction(sign the revert of commit) | |
+| Request end of epoch / summary | |
+| Send message | |
+| Suggest transaction between two friends | |
+| Suggest revokation of trust/leaving circle(alter user's key to null) | |
+| Add person in trust network to 'friends circle' |
+| merge differences/resolve conflict. | |
+
+git over csv, operations modelled as commits, branching(contention), rebasing, merging
+
+find arbitrary commit? 
+store hash unencrypted as subject.
+
+merge voting. 
+
+communication in comments to commit
